@@ -12,8 +12,10 @@ public class WeaponHandling : MonoBehaviour
     private void Update()
     {
         var mousePos = (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        var offset = mousePos - (Vector2)player.position;
-        transform.position = (Vector2)player.position + Vector2.ClampMagnitude(offset, maxDistanceFromPlayer);
+        var offset = mousePos - ((Vector2)player.position + Vector2.up);
+
+        // Vector2.up to compensate for player pivot being at feet
+        transform.position = (Vector2)player.position + Vector2.up + Vector2.ClampMagnitude(offset, maxDistanceFromPlayer);
 
         var angle = Mathf.Atan2(transform.position.y - player.position.y, transform.position.x - player.position.x) * Mathf.Rad2Deg;
 

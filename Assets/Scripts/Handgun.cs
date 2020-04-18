@@ -8,7 +8,7 @@ public class Handgun : MonoBehaviour, iWeapon
     [SerializeField]
     private GameObject bullet;
     [SerializeField]
-    private float inaccuracy = 3f,
+    private float inaccuracy = 0.3f,
                   coolDownTime = .2f,
                   shuntForce = 5f;
 

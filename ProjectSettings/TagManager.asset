@@ -53,3 +53,9 @@ TagManager:
   - name: Actors
     uniqueID: 1275261239
     locked: 0
+  - name: Projectiles
+    uniqueID: 954525029
+    locked: 0
+  - name: Walls
+    uniqueID: 3065880091
+    locked: 0

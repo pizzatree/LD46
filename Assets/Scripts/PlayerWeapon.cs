@@ -12,6 +12,6 @@ public class PlayerWeapon : MonoBehaviour
     private void Update()
     {
         if (Input.GetMouseButtonDown(0))
-            weapon.Fire();
+            weapon?.Fire();
     }
 }
