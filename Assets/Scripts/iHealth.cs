@@ -8,6 +8,7 @@ public abstract class Health : MonoBehaviour
 
     protected float currentHealth;
     public event Action OnTakeDamage = delegate { };
+    private bool dead = false;
 
     private void Start()
     {
@@ -18,8 +19,11 @@ public abstract class Health : MonoBehaviour
     {
         currentHealth -= amount;
 
-        if (currentHealth <= 0)
+        if (currentHealth <= 0 && !dead)
+        {
+            dead = true;
             Die();
+        }
     }
 
     protected virtual void Die()

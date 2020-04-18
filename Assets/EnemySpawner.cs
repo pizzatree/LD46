@@ -5,6 +5,10 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
     [SerializeField]
+    private int baseSpawns = 12,
+                extraSpawnsPerRound = 6;
+
+    [SerializeField]
     private float spawnRate = 3f,
                   spawnRateChange = 0.2f,
                   spawnRateFloor = 1f,
@@ -13,7 +17,7 @@ public class EnemySpawner : MonoBehaviour
     private float currentSpawnRate;
     private float spawnTimer;
     [SerializeField]
-    private bool doSpawns = false;
+    private bool doSpawns = true;
 
     private Transform player => GameObject.FindGameObjectWithTag("Player").transform;
 
@@ -22,17 +26,45 @@ public class EnemySpawner : MonoBehaviour
 
     public void LowerSpawnRate() 
         => spawnRate -= (spawnRate > spawnRateFloor) ? spawnRateChange : 0;
-    public void StopSpawns() => doSpawns = false;
-    public void StartSpawns() => doSpawns = true;
+    private void StopSpawns() => doSpawns = false;
+    private void StartSpawns() => doSpawns = true;
 
 
     private void Start()
     {
         currentSpawnRate = spawnRate;
         spawnTimer = spawnRate;
+        desiredSpawns = baseSpawns;
     }
 
     private void Update()
+    {
+        if (GameStateManager.Instance.GameState == GameState.Shooty)
+        {
+            HandleWaves();
+            Spawning();
+        }
+    }
+
+    private int waveNumber = 1;
+    private int curNumSpawns = 0;
+    private int desiredSpawns;
+    private void HandleWaves()
+    {
+        if (curNumSpawns >= desiredSpawns)
+        {
+            StopSpawns();
+            curNumSpawns = 0;
+            desiredSpawns += extraSpawnsPerRound;
+        }
+
+        if (GameStateManager.Instance.activeEnemies <= 0 && doSpawns == false)
+        {
+            GameStateManager.Instance.GameState = GameState.Scenario;
+            ++waveNumber;
+        }
+    }
+    private void Spawning()
     {
         if (!doSpawns)
             return;
@@ -56,5 +88,7 @@ public class EnemySpawner : MonoBehaviour
 
         Instantiate(Enemies[Random.Range(0, Enemies.Length)], desiredSpawn, Quaternion.identity);
         spawnTimer = currentSpawnRate;
+        ++curNumSpawns;
+        ++GameStateManager.Instance.activeEnemies;
     }
 }

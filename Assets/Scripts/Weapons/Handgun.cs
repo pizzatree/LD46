@@ -51,8 +51,5 @@ public class Handgun : MonoBehaviour, iWeapon
         transform.position += (transform.position - GameObject.FindGameObjectWithTag("Player").transform.position).normalized * 3.5f;
     }
 
-    public void Equip()
-    {
-        weapHandler.Activate();
-    }
+    public void Equip() => weapHandler.Activate();
 }

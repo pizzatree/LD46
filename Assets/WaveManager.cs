@@ -2,14 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyHealth : Health
+public class WaveManager : MonoBehaviour
 {
-    protected override void Die()
-    {
-        --GameStateManager.Instance.activeEnemies;
-        base.Die();
-    }
-
     // Start is called before the first frame update
     void Start()
     {
