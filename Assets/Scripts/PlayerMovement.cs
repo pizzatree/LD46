@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
 
     private float remainingSprintTime;
     private bool ableToSprint = true;
+    private Animator animator => GetComponent<Animator>();
     private Rigidbody2D rb => GetComponent<Rigidbody2D>();
 
     private void Start() => remainingSprintTime = maxSprintTime;
@@ -23,11 +24,16 @@ public class PlayerMovement : MonoBehaviour
         remainingSprintTime = Mathf.Clamp(remainingSprintTime, -.1f, remainingSprintTime);
 
         var moveInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
+
+        if (moveInput.magnitude > 0.1f)
+            animator.SetBool("Running", true);
+        else
+            animator.SetBool("Running", false);
         
         if(Input.GetKey(KeyCode.LeftShift) && ableToSprint) // Handle Sprint
         {
             moveInput *= sprintMultiplier;
-            remainingSprintTime -= 2 * Time.fixedDeltaTime;
+            remainingSprintTime -= 3 * Time.fixedDeltaTime;
             if (remainingSprintTime <= 0f)
             {
                 ableToSprint = false;
