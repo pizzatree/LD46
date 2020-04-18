@@ -41,3 +41,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Ground
+    uniqueID: 852854797
+    locked: 0
+  - name: HouseFloor
+    uniqueID: 201166669
+    locked: 0
+  - name: Props
+    uniqueID: 4142781689
+    locked: 0
+  - name: Actors
+    uniqueID: 1275261239
+    locked: 0
