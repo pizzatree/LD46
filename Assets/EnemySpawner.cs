@@ -12,6 +12,8 @@ public class EnemySpawner : MonoBehaviour
 
     private float currentSpawnRate;
     private float spawnTimer;
+    [SerializeField]
+    private bool doSpawns = false;
 
     private Transform player => GameObject.FindGameObjectWithTag("Player").transform;
 
@@ -20,6 +22,9 @@ public class EnemySpawner : MonoBehaviour
 
     public void LowerSpawnRate() 
         => spawnRate -= (spawnRate > spawnRateFloor) ? spawnRateChange : 0;
+    public void StopSpawns() => doSpawns = false;
+    public void StartSpawns() => doSpawns = true;
+
 
     private void Start()
     {
@@ -29,6 +34,9 @@ public class EnemySpawner : MonoBehaviour
 
     private void Update()
     {
+        if (!doSpawns)
+            return;
+
         spawnTimer -= Time.deltaTime;
 
         if (spawnTimer <= 0)

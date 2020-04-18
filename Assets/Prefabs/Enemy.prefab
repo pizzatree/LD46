@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 55754854703708870}
   - component: {fileID: 55754854703708889}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Graphic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,8 @@ GameObject:
   - component: {fileID: 55754855854958729}
   - component: {fileID: 55754855854958731}
   - component: {fileID: 1042400774164970792}
-  m_Layer: 0
+  - component: {fileID: 4934304717667996565}
+  m_Layer: 8
   m_Name: Enemy
   m_TagString: Baddie
   m_Icon: {fileID: 0}
@@ -124,7 +125,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 55754855854959477}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -136,7 +137,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 7
+  m_Constraints: 4
 --- !u!95 &55754855854958729
 Animator:
   serializedVersion: 3
@@ -195,3 +196,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHealth: 10
+--- !u!114 &4934304717667996565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 55754855854959477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62e7b10b42cc8db43865b1b83be80a2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distToShoot: 5
+  moveSpeed: 10
+  attackableLayers:
+    serializedVersion: 2
+    m_Bits: 55
