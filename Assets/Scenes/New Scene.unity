@@ -2849,7 +2849,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1045457428}
-  - component: {fileID: 1045457429}
   m_Layer: 0
   m_Name: Toilet
   m_TagString: Untagged
@@ -2873,32 +2872,6 @@ Transform:
   m_Father: {fileID: 721173048}
   m_RootOrder: 59
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &1045457429
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1045457427}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.25, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 2, y: 2.25}
-  m_EdgeRadius: 0
 --- !u!1001 &1051370036
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5674,7 +5647,7 @@ PrefabInstance:
     - target: {fileID: 1734695915450037395, guid: 55b832cd7172e3942b6890ed53473a85,
         type: 3}
       propertyPath: inaccuracy
-      value: 0.1
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1734695915450037399, guid: 55b832cd7172e3942b6890ed53473a85,
         type: 3}
@@ -5749,11 +5722,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Enemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 55754855854959478, guid: 5bf9bb290a47ece469c697881c832bb9,
-        type: 3}
-      propertyPath: m_BodyType
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5bf9bb290a47ece469c697881c832bb9, type: 3}
@@ -5838,11 +5806,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 6057524542898177128, guid: d185061917df19345b6cdb25678eaf12,
-        type: 3}
-      propertyPath: maxSprintTime
-      value: 1.5
-      objectReference: {fileID: 0}
     - target: {fileID: 6057524542898177130, guid: d185061917df19345b6cdb25678eaf12,
         type: 3}
       propertyPath: m_Name

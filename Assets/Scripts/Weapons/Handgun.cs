@@ -8,7 +8,7 @@ public class Handgun : MonoBehaviour, iWeapon
     [SerializeField]
     private GameObject bullet;
     [SerializeField]
-    private float inaccuracy = 0.3f,
+    private float inaccuracy = 0.1f,
                   coolDownTime = .2f,
                   shuntForce = 5f;
 
@@ -30,7 +30,8 @@ public class Handgun : MonoBehaviour, iWeapon
     private IEnumerator Shoot()
     {
         var shotRot = transform.rotation;
-        shotRot.z += UnityEngine.Random.Range(-inaccuracy, inaccuracy);
+        shotRot.z += Quaternion.Euler(0, 0, UnityEngine.Random.Range(-inaccuracy, inaccuracy)).z;
+
         Instantiate(bullet, firepoint.position, shotRot);
 
         coolingDown = true;

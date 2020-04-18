@@ -140,6 +140,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 6336846799052307132, guid: dd5236c793ba71946a7ba098be9d4ea3, type: 3}
-  inaccuracy: 0.3
-  coolDownTime: 0
+  inaccuracy: 10
+  coolDownTime: 0.2
   shuntForce: 5

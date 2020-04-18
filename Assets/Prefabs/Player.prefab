@@ -248,7 +248,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   sprintMultiplier: 2
-  maxSprintTime: 3
+  maxSprintTime: 1.5
 --- !u!50 &6057524542898177129
 Rigidbody2D:
   serializedVersion: 4

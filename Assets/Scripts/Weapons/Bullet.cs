@@ -3,13 +3,16 @@
 public class Bullet : iHurt
 {
     [SerializeField] private float speed = 20f;
+    private Vector3 dir = Vector3.right;
     private void Update()
     {
-        transform.Translate(Vector3.right * speed * Time.deltaTime);
+        transform.Translate(dir * speed * Time.deltaTime);
     }
 
     private void Start()
     {
+        if (allegiance == Allegiance.Enemy)
+            dir = Vector3.left;
         Destroy(gameObject, 3f);
     }
 
