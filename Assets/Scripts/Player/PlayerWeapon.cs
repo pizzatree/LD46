@@ -4,10 +4,14 @@ using UnityEngine;
 
 public class PlayerWeapon : MonoBehaviour
 {
-    [SerializeField] 
-    private GameObject weaponObject;
+    private iWeapon weapon;
 
-    private iWeapon weapon => weaponObject.GetComponent<iWeapon>();
+    public void SwapWeapon(iWeapon newWeapon)
+    {
+        weapon?.Drop();
+        weapon = newWeapon;
+        weapon.Equip();
+    }
 
     private void Update()
     {
