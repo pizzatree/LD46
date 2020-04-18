@@ -12,6 +12,7 @@ public class GameStateManager : MonoBehaviour
 
     public bool forceNextWave = false;
     private GameObject player;
+    [SerializeField] private GameObject scenarioUI;
     private void Awake()
     {
         if (Instance == null)
@@ -23,7 +24,6 @@ public class GameStateManager : MonoBehaviour
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-
     }
 
     private void Update()
@@ -36,12 +36,16 @@ public class GameStateManager : MonoBehaviour
 
     public void ResumeShooty()
     {
+        scenarioUI.SetActive(false);
+        Camera.main.gameObject.SetActive(true);
         player.SetActive(true);
         _GameState = GameState.Shooty;
     }
 
     public void LaunchScenario()
     {
+        scenarioUI.SetActive(true);
+        Camera.main.gameObject.SetActive(false);
         player.SetActive(false);
         _GameState = GameState.Scenario;
     }

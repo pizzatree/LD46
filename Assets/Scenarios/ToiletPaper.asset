@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: ToiletPaper
+  m_EditorClassIdentifier: Assembly-CSharp::Scenario
+  Title: Ran out of toilet paper
+  ScenarioText: 'At the end of your battle, you hear a blood curdling shriek radiating
+    from down the hall.
+
+    Beneath the door to the washroom the floor boards are
+    shimmering as if a gelatinous red wine were spilled across them.
+
+    You hear
+    heavy breathing...
+
+    You open the door and discover that your accomplice has
+    run out of toilet paper.
+
+    To retrieve more leaves open the opportunity of
+    a surprise attack, to not could mean certain death by unsantized wipe.
+
+'
+  Choice1: Seek out more TP
+  C1SuccessWeight: 65
+  C1SuccessText: You found two ply and returned safely. Your accomplice is eternally
+    in your debt.
+  C1FailureText: You found single ply and returned safely. Your accomplice is safe
+    from bullet wounds; however, the damaged spirits from using single ply may prove
+    an immovable hurdle.
+  C1RewardID: 0
+  Choice2: Tell your accomplice to brave it out with napkins
+  Choice2SuccessWeight: 80
+  C2SuccessText: Has your accomplice been eating snickers? The brown substance on
+    their fingers is absolutely vile.
+  C2FailureText: Your accomplice died of fleshwounds from down under.
+  C2RewardID: 0

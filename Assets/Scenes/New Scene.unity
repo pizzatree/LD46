@@ -1269,6 +1269,56 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d70b57064708d24d923a43145833740, type: 3}
+--- !u!1 &285414668
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 285414670}
+  - component: {fileID: 285414669}
+  m_Layer: 0
+  m_Name: Scenarios
+  m_TagString: Scenarios
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &285414669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 285414668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f3faffef0214b2419d767ca8ceb86fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: {fileID: 962984521}
+  text: {fileID: 626982653}
+  buttonText1: {fileID: 933709991}
+  buttonText2: {fileID: 1998490906}
+  ScenarioList:
+  - {fileID: 11400000, guid: 3002a86738d95a44996c4e810f293861, type: 2}
+--- !u!4 &285414670
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 285414668}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2001829549}
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &288618424 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3228550834140201821, guid: 6d70b57064708d24d923a43145833740,
@@ -3343,7 +3393,7 @@ GameObject:
   - component: {fileID: 962984522}
   - component: {fileID: 962984521}
   m_Layer: 5
-  m_Name: Title
+  m_Name: Scenario Title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3802,6 +3852,7 @@ MonoBehaviour:
   _GameState: 0
   activeEnemies: 0
   forceNextWave: 0
+  scenarioUI: {fileID: 285414668}
 --- !u!1 &1116952056
 GameObject:
   m_ObjectHideFlags: 0
@@ -4154,7 +4205,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1289855724
 PrefabInstance:
@@ -6592,7 +6643,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2001829549}
   - component: {fileID: 2001829548}
-  - component: {fileID: 2001829547}
   - component: {fileID: 2001829546}
   m_Layer: 0
   m_Name: Camera
@@ -6632,14 +6682,6 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
---- !u!81 &2001829547
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2001829545}
-  m_Enabled: 1
 --- !u!20 &2001829548
 Camera:
   m_ObjectHideFlags: 0
@@ -6690,13 +6732,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2001829545}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: -1000, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1212522593}
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_Father: {fileID: 285414670}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &2013773770 stripped
 Transform:
