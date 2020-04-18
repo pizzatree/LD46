@@ -39,7 +39,7 @@ public class EnemySpawner : MonoBehaviour
 
     private void Update()
     {
-        if (GameStateManager.Instance.GameState == GameState.Shooty)
+        if (GameStateManager.Instance._GameState == GameState.Shooty)
         {
             HandleWaves();
             Spawning();
@@ -56,12 +56,15 @@ public class EnemySpawner : MonoBehaviour
             StopSpawns();
             curNumSpawns = 0;
             desiredSpawns += extraSpawnsPerRound;
+            if(spawnRate > spawnRateFloor)
+                spawnRate -= spawnRateChange;
         }
 
         if (GameStateManager.Instance.activeEnemies <= 0 && doSpawns == false)
         {
-            GameStateManager.Instance.GameState = GameState.Scenario;
+            GameStateManager.Instance._GameState = GameState.Scenario;
             ++waveNumber;
+            doSpawns = true;
         }
     }
     private void Spawning()
