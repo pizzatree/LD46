@@ -1322,12 +1322,12 @@ PrefabInstance:
     - target: {fileID: 6390638605341312131, guid: 25a0dc4167de72a4babc68423dca3fc7,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.8980403
+      value: -19.08
       objectReference: {fileID: 0}
     - target: {fileID: 6390638605341312131, guid: 25a0dc4167de72a4babc68423dca3fc7,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.54
+      value: -19.88
       objectReference: {fileID: 0}
     - target: {fileID: 6390638605341312131, guid: 25a0dc4167de72a4babc68423dca3fc7,
         type: 3}
@@ -3031,8 +3031,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1093477864}
   - component: {fileID: 1093477863}
+  - component: {fileID: 1093477865}
   m_Layer: 0
-  m_Name: '[ Enemy Spawner ]'
+  m_Name: Managers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3050,6 +3051,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a3ff8148c48b9d4fb41d7c579223373, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  baseSpawns: 12
+  extraSpawnsPerRound: 6
   spawnRate: 3
   spawnRateChange: 0.2
   spawnRateFloor: 1
@@ -3071,6 +3074,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1093477865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1093477862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 462524ce0ca507d4780f38075f853a68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _GameState: 0
+  activeEnemies: 0
+  forceNextWave: 0
 --- !u!1 &1116952056
 GameObject:
   m_ObjectHideFlags: 0

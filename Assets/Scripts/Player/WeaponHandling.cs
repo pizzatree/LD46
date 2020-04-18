@@ -22,7 +22,7 @@ public class WeaponHandling : MonoBehaviour
     
     private void Update()
     {
-        if (active)
+        if (active && GameStateManager.Instance._GameState == GameState.Shooty)
         {
             var mousePos = (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition);
             var offset = mousePos - ((Vector2)player.position + Vector2.up);

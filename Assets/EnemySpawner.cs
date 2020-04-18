@@ -62,7 +62,7 @@ public class EnemySpawner : MonoBehaviour
 
         if (GameStateManager.Instance.activeEnemies <= 0 && doSpawns == false)
         {
-            GameStateManager.Instance._GameState = GameState.Scenario;
+            GameStateManager.Instance.LaunchScenario();
             ++waveNumber;
             doSpawns = true;
         }

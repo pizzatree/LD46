@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
+using System;
 
 public class GameStateManager : MonoBehaviour
 {  
@@ -10,7 +11,7 @@ public class GameStateManager : MonoBehaviour
     public int activeEnemies = 0;
 
     public bool forceNextWave = false;
-
+    private GameObject player;
     private void Awake()
     {
         if (Instance == null)
@@ -19,13 +20,30 @@ public class GameStateManager : MonoBehaviour
             Destroy(this);
     }
 
+    private void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+
+    }
+
     private void Update()
     {
         if(forceNextWave)
         {
-            forceNextWave = false;
-            _GameState = GameState.Shooty;
+            ResumeShooty();
         }
+    }
+
+    public void ResumeShooty()
+    {
+        player.SetActive(true);
+        _GameState = GameState.Shooty;
+    }
+
+    public void LaunchScenario()
+    {
+        player.SetActive(false);
+        _GameState = GameState.Scenario;
     }
 }
 
