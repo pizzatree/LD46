@@ -7,6 +7,7 @@ TagManager:
   - Baddie
   - No Spawn
   - Toilet Guy
+  - Scenario Camera
   layers:
   - Default
   - TransparentFX
