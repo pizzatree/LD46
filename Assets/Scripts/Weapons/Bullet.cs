@@ -23,6 +23,7 @@ public class Bullet : iHurt
         if (health != null && ValidHit(collision.collider.tag))
         {
             health.TakeDamage(damage);
+            collision.rigidbody.MovePosition(collision.rigidbody.position + collision.contacts[0].normal * -2);
             Destroy(gameObject);
         }
     }
