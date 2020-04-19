@@ -5,7 +5,20 @@ using UnityEngine.SceneManagement;
 
 public class PlayerHealth : Health
 {
+    public static PlayerHealth Instance;
+
     SpriteRenderer sprite => GetComponentInChildren<SpriteRenderer>();
+    private void Awake()
+    {
+        Instance = this;
+    }
+
+
+    public void DoRefill()
+    {
+        currentHealth = MaxHealth;
+        sprite.color = Color.white;
+    }
 
     public override void TakeDamage(float amount)
     {

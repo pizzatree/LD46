@@ -44,6 +44,7 @@ public class ScenarioManager : MonoBehaviour
     private void RewardHandler()
     {
         inventory.RemoveTP(1);
+        FillHealth();
 
         if (rewardingActions == null)
             return;
@@ -52,7 +53,7 @@ public class ScenarioManager : MonoBehaviour
             Invoke(action, 0);
     }
 
-    private void FillHealth() => Debug.Log("add health refilling");
+    private void FillHealth() => PlayerHealth.Instance.DoRefill();
     private void AddSentry() => inventory.Add(InventoryPickups.SentryBot);
     private void DoGameOver() => GameOver.Instance.HandleGameOver();
     private void AddWalls() => inventory.Add(InventoryPickups.Walls);

@@ -28,7 +28,6 @@ MonoBehaviour:
     ply may prove an immutable hurdle."
   C1SuccessRewards:
   - AddWalls
-  - FillHealth
   C1FailureRewards: []
   Choice2: Brave it out (30%)
   C2SuccessWeight: 35
