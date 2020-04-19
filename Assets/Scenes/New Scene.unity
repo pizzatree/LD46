@@ -355,18 +355,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d70b57064708d24d923a43145833740, type: 3}
---- !u!114 &39503195 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6714785414813628699, guid: d185061917df19345b6cdb25678eaf12,
-    type: 3}
-  m_PrefabInstance: {fileID: 6057524542948723094}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &44960805
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3903,18 +3891,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &923752658 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 923752658, guid: d185061917df19345b6cdb25678eaf12,
-    type: 3}
-  m_PrefabInstance: {fileID: 6057524542948723094}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &933709989
 GameObject:
   m_ObjectHideFlags: 0
@@ -5192,7 +5168,6 @@ GameObject:
   - component: {fileID: 1093477864}
   - component: {fileID: 1093477863}
   - component: {fileID: 1093477865}
-  - component: {fileID: 1093477866}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -5212,7 +5187,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a3ff8148c48b9d4fb41d7c579223373, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseSpawns: 12
+  baseSpawns: 1
   extraSpawnsPerRound: 4
   spawnRate: 2
   spawnRateChange: 0.2
@@ -5254,23 +5229,6 @@ MonoBehaviour:
   activeEnemies: 0
   forceNextWave: 0
   scenarioUI: {fileID: 285414668}
---- !u!114 &1093477866
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1093477862}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77df0609c27505a4d8d4b2ee09cd2e89, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  numTP: 3
-  numWalls: 0
-  numSentries: 0
-  tpText: {fileID: 923752658}
-  wallText: {fileID: 39503195}
 --- !u!4 &1102079480 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3228550834140201821, guid: 6d70b57064708d24d923a43145833740,

@@ -11,8 +11,7 @@ public class ObstaclePlacer : MonoBehaviour
     private GameObject sentry,
                        wall;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         inventory = GetComponent<Inventory>();
     }
@@ -36,14 +35,16 @@ public class ObstaclePlacer : MonoBehaviour
         Vector2 placement;
         Quaternion rotation;
         GetPlacementProperties(out placement, out rotation);
-
+        Debug.Log("#s" + inventory.numSentries + " #w" + inventory.numWalls);
         if (inventory.numSentries > 0)
         {
+            Debug.Log("here");
             Instantiate(sentry, placement, rotation);
             inventory.RemoveSentry();
         }
         else if (inventory.numWalls > 0)
         {
+            Debug.Log("!!here");
             Instantiate(wall, placement, rotation);
             inventory.RemoveWall();
         }
