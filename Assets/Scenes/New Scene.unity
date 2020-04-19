@@ -1245,7 +1245,7 @@ Transform:
   - {fileID: 1746552206}
   - {fileID: 1985667980}
   m_Father: {fileID: 0}
-  m_RootOrder: 30
+  m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &114474604
 PrefabInstance:
@@ -2986,11 +2986,16 @@ MonoBehaviour:
   - {fileID: 1960474806}
   - {fileID: 1746552206}
   - {fileID: 1985667980}
-  pistol: {fileID: 0}
-  shotgun: {fileID: 0}
-  rapidfireGun: {fileID: 0}
-  ammo: {fileID: 0}
-  tp: {fileID: 0}
+  pistol: {fileID: 1734695915450037399, guid: 55b832cd7172e3942b6890ed53473a85, type: 3}
+  shotgun: {fileID: 6390638605341312134, guid: 25a0dc4167de72a4babc68423dca3fc7, type: 3}
+  rapidfireGun: {fileID: 9123223037129902953, guid: 266e5353503f0be4aa62413c23a4f447,
+    type: 3}
+  ammo: {fileID: 603150657073396964, guid: ac8877f2b71328b4d8f98dde3bde98b4, type: 3}
+  tp: {fileID: 8771913057510274269, guid: ab278a767c4ab3841ae7da6ecbd14da4, type: 3}
+  enemy:
+  - {fileID: 5454620255133062023, guid: 29f56391811d20f4fa85d3444d1bc0cf, type: 3}
+  - {fileID: 55754855854959477, guid: 5bf9bb290a47ece469c697881c832bb9, type: 3}
+  - {fileID: 9123223037129902953, guid: 266e5353503f0be4aa62413c23a4f447, type: 3}
 --- !u!4 &285414670
 Transform:
   m_ObjectHideFlags: 0
@@ -3004,7 +3009,7 @@ Transform:
   m_Children:
   - {fileID: 2001829549}
   m_Father: {fileID: 0}
-  m_RootOrder: 27
+  m_RootOrder: 30
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &289022486
 PrefabInstance:
@@ -11663,7 +11668,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 28
+  m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &932461165
 PrefabInstance:
@@ -20197,7 +20202,7 @@ PrefabInstance:
     - target: {fileID: 3824501196513826837, guid: a433413b85d451144999830ee423098c,
         type: 3}
       propertyPath: m_RootOrder
-      value: 29
+      value: 28
       objectReference: {fileID: 0}
     - target: {fileID: 3824501196513826837, guid: a433413b85d451144999830ee423098c,
         type: 3}

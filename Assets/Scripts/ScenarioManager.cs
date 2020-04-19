@@ -86,6 +86,11 @@ public class ScenarioManager : MonoBehaviour
     private GameObject tp;
     private void DropTP() => DropItem(tp);
 
+    [SerializeField]
+    private GameObject[] enemy;
+    private void SurpriseAttack()
+        => DropItem(enemy[Random.Range(0, enemy.Length)]);
+
     private void RepairBaseWalls()
     {
         var newWalls = Instantiate(baseWallsPrefab, baseWallsHolder.transform.position, Quaternion.identity);
