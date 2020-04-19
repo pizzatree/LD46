@@ -37,7 +37,6 @@ public class GameStateManager : MonoBehaviour
     public void ResumeShooty()
     {
         scenarioUI.SetActive(false);
-        Camera.main.gameObject.SetActive(true);
         player.SetActive(true);
         _GameState = GameState.Shooty;
     }
@@ -45,7 +44,6 @@ public class GameStateManager : MonoBehaviour
     public void LaunchScenario()
     {
         scenarioUI.SetActive(true);
-        Camera.main.gameObject.SetActive(false);
         player.SetActive(false);
         _GameState = GameState.Scenario;
     }
