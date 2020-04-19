@@ -12,32 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb3c7f724e184c34babcfe9aaad5c372, type: 3}
   m_Name: ToiletPaper
   m_EditorClassIdentifier: Assembly-CSharp::Scenario
-  Title: Ran out of toilet paper
-  ScenarioText: 'At the end of your battle, you hear a blood curdling shriek radiating
-    from down the hall.
-
-    Beneath the door to the washroom the floor boards are
-    shimmering as if a gelatinous red wine were spilled across them.
-
-    You hear
-    heavy breathing...
-
-    You open the door and discover that your accomplice has
-    run out of toilet paper.
-
-    To retrieve more leaves open the opportunity of
-    a surprise attack, to not could mean certain death by unsantized wipe.
-
-'
+  Title: Heavy wipes
+  ScenarioText: "At the end of your battle, you hear a blood curdling shriek radiating
+    from down the hall.\nBeneath the door to the washroom the floor boards are shimmering...\n
+    ...as if a gelatinous red wine were spilled across them.\n\nYou hear heavy breathing...\n\nYou
+    open the door and discover that your accomplice needs more than just toilet paper.\nTo
+    retrieve more wiping material leaves open the opportunity of a surprise attack...
+    \n ....to not could mean certain death by unsanitized wipe."
   RewardID: 0
-  Choice1: Seek out more TP (65%)
+  Choice1: Seek out baby wipes (65%)
   C1SuccessWeight: 65
-  C1SuccessText: You found two ply and returned safely. Your accomplice is eternally
-    in your debt.
+  C1SuccessText: You found baby wipes. Your accomplice is eternally in your debt.
   C1FailureText: You found single ply and returned safely. Your accomplice is safe
     from bullet wounds; however, the damaged spirits from using single ply may prove
     an immovable hurdle.
-  Choice2: Tell your accomplice to brave it out with napkins (30%)
+  Choice2: Brave it out (30%)
   C2SuccessWeight: 30
   C2SuccessText: Has your accomplice been eating snickers? The brown substance on
     their fingers is absolutely vile.
