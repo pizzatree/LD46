@@ -84,6 +84,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: RapidfireGuy
       objectReference: {fileID: 0}
+    - target: {fileID: 1042400774164970792, guid: 5bf9bb290a47ece469c697881c832bb9,
+        type: 3}
+      propertyPath: MaxHealth
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4934304717667996565, guid: 5bf9bb290a47ece469c697881c832bb9,
         type: 3}
       propertyPath: distToShoot
