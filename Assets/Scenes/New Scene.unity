@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -2095,7 +2095,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &285414669
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4393,8 +4393,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "At the end of your battle, you hear a blood curdling shriek radiating
-    from down the hall.\nBeneath the door to the washroom the floor boards are shimmering...\n
-    ...as if a gelatinous red wine were spilled across them.\n\nYou hear heavy breathing...\n\nYou
+    from down the hall.\nBeneath the door to the washroom the floor boards are shimmering...\n...as
+    if a gelatinous red wine were spilled across them.\n\nYou hear heavy breathing...\n\nYou
     open the door and discover that your accomplice needs more than just toilet paper.\nTo
     retrieve more wiping material leaves open the opportunity of a surprise attack...
     \n ....to not could mean certain death by unsanitized wipe.\n"
@@ -4442,7 +4442,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 333
+  m_firstOverflowCharacterIndex: 332
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -4466,9 +4466,9 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 626982653}
-    characterCount: 477
+    characterCount: 476
     spriteCount: 0
-    spaceCount: 84
+    spaceCount: 83
     wordCount: 79
     linkCount: 0
     lineCount: 9
@@ -7788,6 +7788,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77df0609c27505a4d8d4b2ee09cd2e89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  numTP: 3
+  numWalls: 0
+  numSentries: 0
   tpText: {fileID: 923752658}
 --- !u!4 &1102079480 stripped
 Transform:

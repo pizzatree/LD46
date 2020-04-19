@@ -17,6 +17,6 @@ public class PlayerHealth : Health
 
     protected override void Die()
     {
-        SceneManager.LoadScene(0);
+        GameOver.Instance.HandleGameOver();
     }
 }

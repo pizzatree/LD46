@@ -22,6 +22,7 @@ public class ScenarioManager : MonoBehaviour
                        secondScreen;
 
     private Scenario activeScenario;
+    private Inventory inventory => FindObjectOfType<Inventory>();
 
     private void OnEnable()
     {
@@ -38,22 +39,40 @@ public class ScenarioManager : MonoBehaviour
 
     private void RewardHandler(int rewardID, bool success)
     {
+        inventory.RemoveTP(1);
 
+        switch (rewardID)
+        {
+            case -1:
+                if (success)
+                    inventory.Add(InventoryPickups.SentryBot);
+                else
+                    GameOver.Instance.HandleGameOver();
+                break;
+            case 1:
+                if (success)
+                    inventory.Add(InventoryPickups.Walls);
+                break;
+
+            default:
+                break;
+        }
     }
 
+    bool success = false;
+    int rewardID = 0;
     private void DoChoice(int choiceNum)
     {
         firstScreen.SetActive(false);
         secondScreen.SetActive(true);
 
         var roll = Random.Range(0f, 100f);
-        bool success = false;
 
         Debug.Log("roll: " + roll);
 
         if (choiceNum == 1)
         {
-
+            rewardID = activeScenario.RewardID;
             if (roll <= activeScenario.C1SuccessWeight)
             {
                 success = true;
@@ -69,6 +88,7 @@ public class ScenarioManager : MonoBehaviour
 
         else if (choiceNum == 2)
         {
+            rewardID = -activeScenario.RewardID;
             if (roll <= activeScenario.C2SuccessWeight)
             {
                 success = true;
@@ -87,5 +107,9 @@ public class ScenarioManager : MonoBehaviour
 
     public void Choice1() => DoChoice(1);
     public void Choice2() => DoChoice(2);
-    public void Exit() => GameStateManager.Instance.ResumeShooty();
+    public void Exit()
+    {
+        GameStateManager.Instance.ResumeShooty();
+        RewardHandler(activeScenario.RewardID, success);
+    }
 }

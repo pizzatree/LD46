@@ -21,13 +21,18 @@ MonoBehaviour:
     \n ....to not could mean certain death by unsanitized wipe."
   RewardID: 0
   Choice1: Seek out baby wipes (65%)
-  C1SuccessWeight: 65
-  C1SuccessText: You found baby wipes. Your accomplice is eternally in your debt.
-  C1FailureText: You found single ply and returned safely. Your accomplice is safe
-    from bullet wounds; however, the damaged spirits from using single ply may prove
-    an immovable hurdle.
+  C1SuccessWeight: 70
+  C1SuccessText: "You found baby wipes. \nYour accomplice is eternally in your debt.\nAlong
+    the way you also found some walls. (Right click)"
+  C1FailureText: "You found single ply and returned safely. \nYour accomplice is
+    safe from bullet wounds; however...\n... the damaged spirits from using single
+    ply may prove an immutable hurdle."
   Choice2: Brave it out (30%)
-  C2SuccessWeight: 30
-  C2SuccessText: Has your accomplice been eating snickers? The brown substance on
-    their fingers is absolutely vile.
-  C2FailureText: Your accomplice died of fleshwounds from down under.
+  C2SuccessWeight: 35
+  C2SuccessText: "Has your accomplice been eating snickers? \nThe brown substance
+    on their fingers is absolutely vile.\nHowever, you found a really cool gadget.
+    (Right click)"
+  C2FailureText: 'Your accomplice died of fleshwounds from down under.
+
+    (Game
+    Over)'

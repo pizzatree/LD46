@@ -5,9 +5,9 @@ using TMPro;
 
 public class Inventory : MonoBehaviour
 {
-    private int numTP = 3;
-    private int numWalls = 0;
-    private int numSentries = 0;
+    public int numTP = 3;
+    public int numWalls = 0;
+    public int numSentries = 0;
 
     [SerializeField]
     private TextMeshProUGUI tpText;
@@ -29,6 +29,12 @@ public class Inventory : MonoBehaviour
                 break;
         }
 
+        UpdateUI();
+    }
+
+    public void RemoveTP(int amt)
+    {
+        numTP -= amt;
         UpdateUI();
     }
 
