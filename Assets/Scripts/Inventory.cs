@@ -11,6 +11,8 @@ public class Inventory : MonoBehaviour
 
     [SerializeField]
     private TextMeshProUGUI tpText;
+    [SerializeField]
+    private TextMeshProUGUI wallText;
 
     public void Add(InventoryPickups pickup)
     {
@@ -41,6 +43,7 @@ public class Inventory : MonoBehaviour
     private void UpdateUI()
     {
         tpText.text = numTP.ToString();
+        wallText.text = numWalls.ToString();
     }
 }
 
