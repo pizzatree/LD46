@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class EnemySpawner : MonoBehaviour
 {
@@ -18,6 +19,9 @@ public class EnemySpawner : MonoBehaviour
     private float spawnTimer;
     [SerializeField]
     private bool doSpawns = true;
+
+    [SerializeField]
+    private TextMeshProUGUI waveText;
 
     private Transform player => GameObject.FindGameObjectWithTag("Player").transform;
 
@@ -62,11 +66,13 @@ public class EnemySpawner : MonoBehaviour
 
         if (GameStateManager.Instance.activeEnemies <= 0 && doSpawns == false)
         {
+            ++waveNumber;
+            waveText.text = waveNumber.ToString();
+
             GameStateManager.Instance.LaunchScenario();
             if (PlayerPrefs.GetInt("HighestRound") < waveNumber)
                 PlayerPrefs.SetInt("HighestRound", waveNumber);
 
-            ++waveNumber;
             doSpawns = true;
         }
     }
