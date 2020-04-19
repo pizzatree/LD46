@@ -19,7 +19,7 @@ MonoBehaviour:
     open the door and discover that your accomplice needs more than just toilet paper.\nTo
     retrieve more wiping material leaves open the opportunity of a surprise attack...
     \n ....to not could mean certain death by unsanitized wipe."
-  RewardID: 0
+  RewardID: 1
   Choice1: Seek out baby wipes (65%)
   C1SuccessWeight: 70
   C1SuccessText: "You found baby wipes. \nYour accomplice is eternally in your debt.\nAlong

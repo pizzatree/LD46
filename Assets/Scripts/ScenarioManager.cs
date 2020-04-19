@@ -24,6 +24,10 @@ public class ScenarioManager : MonoBehaviour
     private Scenario activeScenario;
     private Inventory inventory => FindObjectOfType<Inventory>();
 
+    [SerializeField]
+    private GameObject baseWallsHolder, // if scenario calls for repairs
+                       baseWallsPrefab;
+
     private void OnEnable()
     {
         firstScreen.SetActive(true);
@@ -45,7 +49,10 @@ public class ScenarioManager : MonoBehaviour
         {
             case -1:
                 if (success)
+                {
+                    RepairBaseWalls();
                     inventory.Add(InventoryPickups.SentryBot);
+                }
                 else
                     GameOver.Instance.HandleGameOver();
                 break;
@@ -57,6 +64,13 @@ public class ScenarioManager : MonoBehaviour
             default:
                 break;
         }
+    }
+
+    private void RepairBaseWalls()
+    {
+        var newWalls = Instantiate(baseWallsPrefab, baseWallsHolder.transform.position, Quaternion.identity);
+        Destroy(baseWallsHolder);
+        baseWallsHolder = newWalls;
     }
 
     bool success = false;
@@ -88,7 +102,7 @@ public class ScenarioManager : MonoBehaviour
 
         else if (choiceNum == 2)
         {
-            rewardID = -activeScenario.RewardID;
+            rewardID = -1 * activeScenario.RewardID;
             if (roll <= activeScenario.C2SuccessWeight)
             {
                 success = true;
@@ -110,6 +124,6 @@ public class ScenarioManager : MonoBehaviour
     public void Exit()
     {
         GameStateManager.Instance.ResumeShooty();
-        RewardHandler(activeScenario.RewardID, success);
+        RewardHandler(rewardID, success);
     }
 }
