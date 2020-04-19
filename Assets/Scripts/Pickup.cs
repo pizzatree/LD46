@@ -14,6 +14,7 @@ public class Pickup : MonoBehaviour
             switch (pickupType)
             {
                 case PickupType.Toiletpaper:
+                    collision.GetComponent<Inventory>().Add(InventoryPickups.TP);
                     break;
                 case PickupType.Money:
                     break;

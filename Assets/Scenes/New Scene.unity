@@ -7770,6 +7770,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77df0609c27505a4d8d4b2ee09cd2e89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tpText: {fileID: 0}
 --- !u!4 &1102079480 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3228550834140201821, guid: 6d70b57064708d24d923a43145833740,
@@ -14266,14 +14267,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1709753899, guid: d185061917df19345b6cdb25678eaf12, type: 3}
-      propertyPath: m_text
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1709753899, guid: d185061917df19345b6cdb25678eaf12, type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6057524542898177130, guid: d185061917df19345b6cdb25678eaf12,
         type: 3}
       propertyPath: m_Name
