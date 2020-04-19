@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb3c7f724e184c34babcfe9aaad5c372, type: 3}
+  m_Name: TP Raiders
+  m_EditorClassIdentifier: 
+  Title: Scene Title
+  ScenarioText: Lorem ipsum dorem, what are you gonna do?
+  Choice1: Wingardium leviosa
+  C1SuccessWeight: 70
+  C1SuccessText: Rooonnn staaahhhppp
+  C1FailureText: Oh no.
+  C1SuccessRewards: []
+  C1FailureRewards: []
+  Choice2: Achio BUM
+  C2SuccessWeight: 30
+  C2SuccessText: Rooonnn staaahhhppp
+  C2FailureText: Oh no.
+  C2SuccessRewards: []
+  C2FailureRewards: []

@@ -176,7 +176,6 @@ MonoBehaviour:
   firePoints:
   - {fileID: 6402276039274961471}
   - {fileID: 8954639337889727453}
-  inaccuracy: 7
   timeBtwnShots: 0.7
   startTime: 0.5
   attackableLayers:
@@ -194,7 +193,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d03470489279084e85c87f050213b4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHealth: 75
+  MaxHealth: 25
 --- !u!50 &-1220504723684430488
 Rigidbody2D:
   serializedVersion: 4

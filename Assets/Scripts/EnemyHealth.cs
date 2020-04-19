@@ -9,16 +9,4 @@ public class EnemyHealth : Health
         --GameStateManager.Instance.activeEnemies;
         base.Die();
     }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
