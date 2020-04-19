@@ -145,6 +145,8 @@ MonoBehaviour:
   coolDownTime: 0.32
   shuntForce: 5
   numBullets: 1
+  numAmmo: 36
+  ammoPickupAmount: 24
 --- !u!61 &1027215855144781667
 BoxCollider2D:
   m_ObjectHideFlags: 0

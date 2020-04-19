@@ -104,11 +104,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1734695915450037395, guid: 55b832cd7172e3942b6890ed53473a85,
         type: 3}
-      propertyPath: numBullets
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1734695915450037395, guid: 55b832cd7172e3942b6890ed53473a85,
-        type: 3}
       propertyPath: coolDownTime
       value: 0.55
       objectReference: {fileID: 0}
@@ -116,6 +111,21 @@ PrefabInstance:
         type: 3}
       propertyPath: inaccuracy
       value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1734695915450037395, guid: 55b832cd7172e3942b6890ed53473a85,
+        type: 3}
+      propertyPath: numBullets
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1734695915450037395, guid: 55b832cd7172e3942b6890ed53473a85,
+        type: 3}
+      propertyPath: numAmmo
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1734695915450037395, guid: 55b832cd7172e3942b6890ed53473a85,
+        type: 3}
+      propertyPath: ammoPickupAmount
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1734695915450037397, guid: 55b832cd7172e3942b6890ed53473a85,
         type: 3}

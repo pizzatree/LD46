@@ -18,7 +18,14 @@ public class Handgun : MonoBehaviour, iWeapon
 
     private bool coolingDown = false;
 
+    [SerializeField]
+    private int numAmmo = 12;
+
+    [SerializeField]
+    private int ammoPickupAmount = 12;
+
     private Transform firepoint => transform.Find("Firepoint");
+    private PlayerWeapon playerWeapon => FindObjectOfType<PlayerWeapon>();
 
     public void Fire()
     {
@@ -26,6 +33,14 @@ public class Handgun : MonoBehaviour, iWeapon
         {
             OnFire();
             StartCoroutine(Shoot());
+            --numAmmo;
+            playerWeapon.UpdateAmmoUI(numAmmo);
+
+            if (numAmmo <= 0)
+            {
+                playerWeapon.SwapWeapon(null);
+                Destroy(gameObject);
+            }
         }
     }
 
@@ -47,9 +62,19 @@ public class Handgun : MonoBehaviour, iWeapon
     WeaponHandling weapHandler => GetComponent<WeaponHandling>();
     public void Drop()
     {
+        playerWeapon.UpdateAmmoUI(0);
         weapHandler.Deactivate();
         transform.position += (transform.position - GameObject.FindGameObjectWithTag("Player").transform.position).normalized * 3.5f;
     }
 
-    public void Equip() => weapHandler.Activate();
+    public void Equip()
+    {
+        weapHandler.Activate();
+        playerWeapon.UpdateAmmoUI(numAmmo);
+    }
+    public void ReplenishAmmo()
+    {
+        numAmmo += ammoPickupAmount;
+        playerWeapon.UpdateAmmoUI(numAmmo);
+    }
 }

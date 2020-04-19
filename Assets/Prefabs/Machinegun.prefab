@@ -122,6 +122,16 @@ PrefabInstance:
       propertyPath: shuntForce
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1734695915450037395, guid: 55b832cd7172e3942b6890ed53473a85,
+        type: 3}
+      propertyPath: numAmmo
+      value: 48
+      objectReference: {fileID: 0}
+    - target: {fileID: 1734695915450037395, guid: 55b832cd7172e3942b6890ed53473a85,
+        type: 3}
+      propertyPath: ammoPickupAmount
+      value: 24
+      objectReference: {fileID: 0}
     - target: {fileID: 1734695915450037397, guid: 55b832cd7172e3942b6890ed53473a85,
         type: 3}
       propertyPath: m_Sprite
