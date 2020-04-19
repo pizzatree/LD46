@@ -142,7 +142,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 6336846799052307132, guid: dd5236c793ba71946a7ba098be9d4ea3, type: 3}
   inaccuracy: 10
-  coolDownTime: 0.2
+  coolDownTime: 0.32
   shuntForce: 5
   numBullets: 1
 --- !u!61 &1027215855144781667
