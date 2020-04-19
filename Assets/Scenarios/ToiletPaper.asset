@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: bb3c7f724e184c34babcfe9aaad5c372, type: 3}
   m_Name: ToiletPaper
   m_EditorClassIdentifier: Assembly-CSharp::Scenario
   Title: Ran out of toilet paper
@@ -29,6 +29,7 @@ MonoBehaviour:
     a surprise attack, to not could mean certain death by unsantized wipe.
 
 '
+  RewardID: 0
   Choice1: Seek out more TP
   C1SuccessWeight: 65
   C1SuccessText: You found two ply and returned safely. Your accomplice is eternally
@@ -36,10 +37,8 @@ MonoBehaviour:
   C1FailureText: You found single ply and returned safely. Your accomplice is safe
     from bullet wounds; however, the damaged spirits from using single ply may prove
     an immovable hurdle.
-  C1RewardID: 0
   Choice2: Tell your accomplice to brave it out with napkins
-  Choice2SuccessWeight: 80
+  C2SuccessWeight: 30
   C2SuccessText: Has your accomplice been eating snickers? The brown substance on
     their fingers is absolutely vile.
   C2FailureText: Your accomplice died of fleshwounds from down under.
-  C2RewardID: 0
