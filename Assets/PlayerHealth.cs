@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : Health
 {
@@ -16,6 +17,6 @@ public class PlayerHealth : Health
 
     protected override void Die()
     {
-        Debug.Log("Game over");
+        SceneManager.LoadScene(0);
     }
 }

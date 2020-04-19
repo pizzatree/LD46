@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class ToiletGuyHealth : Health
+public class MainMenu : MonoBehaviour
 {
-    protected override void Die()
+    public void LoadLevel()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
 }
