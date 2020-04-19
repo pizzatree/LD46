@@ -67,7 +67,7 @@ public class BasicEnemy : MonoBehaviour
 
     private void DoPursuit()
     {
-        if(ObstacleDistance <= distToShoot)
+        if(hit.collider != null && ObstacleDistance <= distToShoot)
             state = State.Shoot;
 
         var nextPos = Vector2.MoveTowards(rb.position, target.position, moveSpeed * Time.fixedDeltaTime);
@@ -77,7 +77,7 @@ public class BasicEnemy : MonoBehaviour
 
     private void DoShoot()
     {
-        if (ObstacleDistance >= 1.75f * distToShoot)
+        if (hit.collider != null && ObstacleDistance >= 1.75f * distToShoot)
             state = State.Pursuit;
 
         if (!shooting)
@@ -112,8 +112,7 @@ public class BasicEnemy : MonoBehaviour
         ++shotCount;
     }
 
-    private float ObstacleDistance 
-        => Vector2.Distance(hit.collider.transform.position, rb.position);
+    private float ObstacleDistance => Vector2.Distance(hit.collider.transform.position, rb.position);
 
     private enum State
     {
