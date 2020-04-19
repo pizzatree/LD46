@@ -36,6 +36,11 @@ public class ScenarioManager : MonoBehaviour
         buttonText2.text = activeScenario.Choice2;
     }
 
+    private void RewardHandler(int rewardID, bool success)
+    {
+
+    }
+
     private void DoChoice(int choiceNum)
     {
         firstScreen.SetActive(false);

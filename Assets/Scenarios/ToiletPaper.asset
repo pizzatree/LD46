@@ -30,14 +30,14 @@ MonoBehaviour:
 
 '
   RewardID: 0
-  Choice1: Seek out more TP
+  Choice1: Seek out more TP (65%)
   C1SuccessWeight: 65
   C1SuccessText: You found two ply and returned safely. Your accomplice is eternally
     in your debt.
   C1FailureText: You found single ply and returned safely. Your accomplice is safe
     from bullet wounds; however, the damaged spirits from using single ply may prove
     an immovable hurdle.
-  Choice2: Tell your accomplice to brave it out with napkins
+  Choice2: Tell your accomplice to brave it out with napkins (30%)
   C2SuccessWeight: 30
   C2SuccessText: Has your accomplice been eating snickers? The brown substance on
     their fingers is absolutely vile.
