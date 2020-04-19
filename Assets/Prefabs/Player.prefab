@@ -519,7 +519,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
-  m_SortingLayerID: 0
+  m_SortingLayerID: -1435216065
   m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!114 &1176865286
@@ -1244,7 +1244,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 627d3acb8ab2dc549a3454e6cfb27be0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sentry: {fileID: 0}
+  sentry: {fileID: 1941384263882321943, guid: e8babb55e97f239468440a85f535faf8, type: 3}
   wall: {fileID: 3228550834140201817, guid: 6d70b57064708d24d923a43145833740, type: 3}
 --- !u!1 &7263200446009275783
 GameObject:

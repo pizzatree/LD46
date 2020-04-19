@@ -32,19 +32,14 @@ public class ObstaclePlacer : MonoBehaviour
 
     private void PlaceObject()
     {
-        Vector2 placement;
-        Quaternion rotation;
-        GetPlacementProperties(out placement, out rotation);
-        Debug.Log("#s" + inventory.numSentries + " #w" + inventory.numWalls);
+        GetPlacementProperties(out Vector2 placement, out Quaternion rotation);
         if (inventory.numSentries > 0)
         {
-            Debug.Log("here");
             Instantiate(sentry, placement, rotation);
             inventory.RemoveSentry();
         }
         else if (inventory.numWalls > 0)
         {
-            Debug.Log("!!here");
             Instantiate(wall, placement, rotation);
             inventory.RemoveWall();
         }
