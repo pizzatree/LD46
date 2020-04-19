@@ -63,6 +63,9 @@ public class EnemySpawner : MonoBehaviour
         if (GameStateManager.Instance.activeEnemies <= 0 && doSpawns == false)
         {
             GameStateManager.Instance.LaunchScenario();
+            if (PlayerPrefs.GetInt("HighestRound") < waveNumber)
+                PlayerPrefs.SetInt("HighestRound", waveNumber);
+
             ++waveNumber;
             doSpawns = true;
         }
