@@ -6,11 +6,23 @@ public class Pickup : MonoBehaviour
 {
     [SerializeField]
     private PickupType pickupType;
-    private void OnCollisionEnter2D(Collision2D collision)
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.collider.CompareTag("Player"))
+        if (collision.CompareTag("Player"))
         {
-            // add to inventory
+            switch (pickupType)
+            {
+                case PickupType.Toiletpaper:
+                    break;
+                case PickupType.Money:
+                    break;
+                case PickupType.Ammo:
+                    collision.GetComponent<PlayerWeapon>().PickupAmmo();
+                    break;
+                default:
+                    break;
+            }
             Destroy(gameObject);
         }
     }

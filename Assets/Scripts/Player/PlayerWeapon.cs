@@ -14,6 +14,11 @@ public class PlayerWeapon : MonoBehaviour
         ammoUI.text = newAmt.ToString();
     }
 
+    public void PickupAmmo()
+    {
+        weapon.ReplenishAmmo();
+    }
+
     public void SwapWeapon(iWeapon newWeapon)
     {
         weapon?.Drop();
