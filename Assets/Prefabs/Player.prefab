@@ -211,7 +211,7 @@ GameObject:
   - component: {fileID: 6057524542898177943}
   - component: {fileID: 6057524542898177940}
   - component: {fileID: 7074104557117293651}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -301,7 +301,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7835d3f968b3b35428a1a8493e64c78f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponObject: {fileID: 0}
 --- !u!61 &6057524542898177940
 BoxCollider2D:
   m_ObjectHideFlags: 0

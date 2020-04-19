@@ -1,0 +1,121 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &1863723284654496584
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3228550834140201816, guid: 6d70b57064708d24d923a43145833740,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.drawMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3228550834140201817, guid: 6d70b57064708d24d923a43145833740,
+        type: 3}
+      propertyPath: m_Name
+      value: Door
+      objectReference: {fileID: 0}
+    - target: {fileID: 3228550834140201817, guid: 6d70b57064708d24d923a43145833740,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3228550834140201821, guid: 6d70b57064708d24d923a43145833740,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3228550834140201821, guid: 6d70b57064708d24d923a43145833740,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3228550834140201821, guid: 6d70b57064708d24d923a43145833740,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3228550834140201821, guid: 6d70b57064708d24d923a43145833740,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3228550834140201821, guid: 6d70b57064708d24d923a43145833740,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3228550834140201821, guid: 6d70b57064708d24d923a43145833740,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3228550834140201821, guid: 6d70b57064708d24d923a43145833740,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3228550834140201821, guid: 6d70b57064708d24d923a43145833740,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3228550834140201821, guid: 6d70b57064708d24d923a43145833740,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3228550834140201821, guid: 6d70b57064708d24d923a43145833740,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3228550834140201821, guid: 6d70b57064708d24d923a43145833740,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3228550834140201822, guid: 6d70b57064708d24d923a43145833740,
+        type: 3}
+      propertyPath: m_DrawMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3228550834140201822, guid: 6d70b57064708d24d923a43145833740,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.6603774
+      objectReference: {fileID: 0}
+    - target: {fileID: 3228550834140201822, guid: 6d70b57064708d24d923a43145833740,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.44102862
+      objectReference: {fileID: 0}
+    - target: {fileID: 3228550834140201822, guid: 6d70b57064708d24d923a43145833740,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3228550834140201822, guid: 6d70b57064708d24d923a43145833740,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: -152185607
+      objectReference: {fileID: 0}
+    - target: {fileID: 3228550834140201822, guid: 6d70b57064708d24d923a43145833740,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3228550834140201823, guid: 6d70b57064708d24d923a43145833740,
+        type: 3}
+      propertyPath: MaxHealth
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3228550834140201823, guid: 6d70b57064708d24d923a43145833740,
+        type: 3}
+      propertyPath: door
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6d70b57064708d24d923a43145833740, type: 3}
