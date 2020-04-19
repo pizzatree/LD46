@@ -28,6 +28,9 @@ public class ScenarioManager : MonoBehaviour
     private GameObject baseWallsHolder, // if scenario calls for repairs
                        baseWallsPrefab;
 
+    [SerializeField]
+    private Transform[] scenarioItemSpots;
+
     private void OnEnable()
     {
         firstScreen.SetActive(true);
@@ -58,6 +61,30 @@ public class ScenarioManager : MonoBehaviour
     private void DoGameOver() => GameOver.Instance.HandleGameOver();
     private void AddWalls() => inventory.Add(InventoryPickups.Walls);
     private void RemoveTP() => inventory.RemoveTP(1);
+
+    private int dropSpot = 0;
+    private void DropItem(GameObject item)
+    => Instantiate(item, scenarioItemSpots[dropSpot++ % scenarioItemSpots.Length].position, Quaternion.identity);
+ 
+    [SerializeField]
+    private GameObject pistol;
+    private void DropPistol() => DropItem(pistol);
+
+    [SerializeField]
+    private GameObject shotgun;
+    private void DropShotgun() => DropItem(shotgun);
+
+    [SerializeField]
+    private GameObject rapidfireGun;
+    private void DropRapidfire() => DropItem(rapidfireGun);
+
+    [SerializeField]
+    private GameObject ammo;
+    private void DropAmmo() => DropItem(ammo);
+
+    [SerializeField]
+    private GameObject tp;
+    private void DropTP() => DropItem(tp);
 
     private void RepairBaseWalls()
     {
