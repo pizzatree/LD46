@@ -41,30 +41,21 @@ public class ScenarioManager : MonoBehaviour
         buttonText2.text = activeScenario.Choice2;
     }
 
-    private void RewardHandler(int rewardID, bool success)
+    private void RewardHandler()
     {
         inventory.RemoveTP(1);
 
-        switch (rewardID)
-        {
-            case -1:
-                if (success)
-                {
-                    RepairBaseWalls();
-                    inventory.Add(InventoryPickups.SentryBot);
-                }
-                else
-                    GameOver.Instance.HandleGameOver();
-                break;
-            case 1:
-                if (success)
-                    inventory.Add(InventoryPickups.Walls);
-                break;
+        if (rewardingActions == null)
+            return;
 
-            default:
-                break;
-        }
+        foreach (var action in rewardingActions)
+            Invoke(action, 0);
     }
+
+    private void FillHealth() => Debug.Log("add health refilling");
+    private void AddSentry() => inventory.Add(InventoryPickups.SentryBot);
+    private void DoGameOver() => GameOver.Instance.HandleGameOver();
+    private void AddWalls() => inventory.Add(InventoryPickups.Walls);
 
     private void RepairBaseWalls()
     {
@@ -74,7 +65,7 @@ public class ScenarioManager : MonoBehaviour
     }
 
     bool success = false;
-    int rewardID = 0;
+    string[] rewardingActions = null;
     private void DoChoice(int choiceNum)
     {
         firstScreen.SetActive(false);
@@ -86,33 +77,35 @@ public class ScenarioManager : MonoBehaviour
 
         if (choiceNum == 1)
         {
-            rewardID = activeScenario.RewardID;
             if (roll <= activeScenario.C1SuccessWeight)
             {
                 success = true;
                 successDetails.text = activeScenario.C1SuccessText;
+                rewardingActions = activeScenario.C1SuccessRewards;
             }
 
             else
             {
                 success = false;
                 successDetails.text = activeScenario.C1FailureText;
+                rewardingActions = activeScenario.C1FailureRewards;
             }
         }
 
         else if (choiceNum == 2)
         {
-            rewardID = -1 * activeScenario.RewardID;
             if (roll <= activeScenario.C2SuccessWeight)
             {
                 success = true;
                 successDetails.text = activeScenario.C2SuccessText;
+                rewardingActions = activeScenario.C2SuccessRewards;
             }
 
             else
             {
                 success = false;
                 successDetails.text = activeScenario.C2FailureText;
+                rewardingActions = activeScenario.C2FailureRewards;
             }
         }
 
@@ -124,6 +117,6 @@ public class ScenarioManager : MonoBehaviour
     public void Exit()
     {
         GameStateManager.Instance.ResumeShooty();
-        RewardHandler(rewardID, success);
+        RewardHandler();
     }
 }

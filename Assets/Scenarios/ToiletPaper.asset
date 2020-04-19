@@ -19,7 +19,6 @@ MonoBehaviour:
     open the door and discover that your accomplice needs more than just toilet paper.\nTo
     retrieve more wiping material leaves open the opportunity of a surprise attack...
     \n ....to not could mean certain death by unsanitized wipe."
-  RewardID: 1
   Choice1: Seek out baby wipes (65%)
   C1SuccessWeight: 70
   C1SuccessText: "You found baby wipes. \nYour accomplice is eternally in your debt.\nAlong
@@ -27,6 +26,10 @@ MonoBehaviour:
   C1FailureText: "You found single ply and returned safely. \nYour accomplice is
     safe from bullet wounds; however...\n... the damaged spirits from using single
     ply may prove an immutable hurdle."
+  C1SuccessRewards:
+  - AddWalls
+  - FillHealth
+  C1FailureRewards: []
   Choice2: Brave it out (30%)
   C2SuccessWeight: 35
   C2SuccessText: "Has your accomplice been eating snickers? \nThe brown substance
@@ -36,3 +39,8 @@ MonoBehaviour:
 
     (Game
     Over)'
+  C2SuccessRewards:
+  - RepairBaseWalls
+  - AddSentry
+  C2FailureRewards:
+  - DoGameOver
