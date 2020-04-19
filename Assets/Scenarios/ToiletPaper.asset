@@ -29,7 +29,7 @@ MonoBehaviour:
   C1SuccessRewards:
   - AddWalls
   C1FailureRewards: []
-  Choice2: Brave it out (30%)
+  Choice2: Brave it out (30%) (-2 TP)
   C2SuccessWeight: 35
   C2SuccessText: "Has your accomplice been eating snickers? \nThe brown substance
     on their fingers is absolutely vile.\nHowever, you found a really cool gadget.
@@ -41,5 +41,6 @@ MonoBehaviour:
   C2SuccessRewards:
   - RepairBaseWalls
   - AddSentry
+  - RemoveTP
   C2FailureRewards:
   - DoGameOver

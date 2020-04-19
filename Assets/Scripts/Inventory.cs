@@ -39,6 +39,17 @@ public class Inventory : MonoBehaviour
         numTP -= amt;
         UpdateUI();
     }
+    public void RemoveSentry()
+    {
+        --numSentries;
+        UpdateUI();
+    }
+
+    public void RemoveWall()
+    {
+        --numWalls;
+        UpdateUI();
+    }
 
     private void UpdateUI()
     {

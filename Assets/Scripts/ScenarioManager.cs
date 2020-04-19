@@ -57,6 +57,7 @@ public class ScenarioManager : MonoBehaviour
     private void AddSentry() => inventory.Add(InventoryPickups.SentryBot);
     private void DoGameOver() => GameOver.Instance.HandleGameOver();
     private void AddWalls() => inventory.Add(InventoryPickups.Walls);
+    private void RemoveTP() => inventory.RemoveTP(1);
 
     private void RepairBaseWalls()
     {

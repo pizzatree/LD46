@@ -5212,7 +5212,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a3ff8148c48b9d4fb41d7c579223373, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseSpawns: 1
+  baseSpawns: 12
   extraSpawnsPerRound: 4
   spawnRate: 2
   spawnRateChange: 0.2
