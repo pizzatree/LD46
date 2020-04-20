@@ -56,7 +56,11 @@ public class ScenarioManager : MonoBehaviour
             Invoke(action, 0);
     }
 
-    private void FillHealth() => PlayerHealth.Instance.DoRefill();
+    private void FillHealth()
+    {
+        ToiletGuyHealth.Instance.Replenish();
+        PlayerHealth.Instance.DoRefill();
+    }
     private void AddSentry() => inventory.Add(InventoryPickups.SentryBot);
     private void DoGameOver() => GameOver.Instance.HandleGameOver();
     private void AddWalls() => inventory.Add(InventoryPickups.Walls);
