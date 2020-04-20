@@ -12,17 +12,58 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb3c7f724e184c34babcfe9aaad5c372, type: 3}
   m_Name: TP Raiders
   m_EditorClassIdentifier: 
-  Title: Scene Title
-  ScenarioText: Lorem ipsum dorem, what are you gonna do?
-  Choice1: Wingardium leviosa
-  C1SuccessWeight: 70
-  C1SuccessText: Rooonnn staaahhhppp
-  C1FailureText: Oh no.
-  C1SuccessRewards: []
-  C1FailureRewards: []
-  Choice2: Achio BUM
-  C2SuccessWeight: 30
-  C2SuccessText: Rooonnn staaahhhppp
-  C2FailureText: Oh no.
-  C2SuccessRewards: []
-  C2FailureRewards: []
+  Title: It's a trap!
+  ScenarioText: 'There is a knocking at the door.
+
+
+    There are a group of people
+    asking to sell you silverware.
+
+
+    They are persistent and quite literally
+    have their foot in the door.'
+  Choice1: Buy Silverware (-1 TP, 85%)
+  C1SuccessWeight: 90
+  C1SuccessText: 'You give them your toilet paper.
+
+
+    They gave you shame and
+    a handgun.'
+  C1FailureText: 'S U R P R I S E!
+
+
+    They are agents waiting to confirm your
+    identity.
+
+
+    You have been I N F I L T R A T E D'
+  C1SuccessRewards:
+  - RemoveTP
+  - DropPistol
+  C1FailureRewards:
+  - SurpriseAttack
+  - SurpriseAttack
+  Choice2: Attack them (50%)
+  C2SuccessWeight: 55
+  C2SuccessText: 'You scared off the salespeople and stole their toiletpaper.
+
+
+    Using
+    their tears, you recaulked the walls.
+
+    (+2TP, Base repaired)'
+  C2FailureText: 'You attempted to thwart off the salespeople,
+
+
+    UNTIL THEY PULLED
+    OUT GUNS
+
+
+    You succeed at closing the door and remember your shotgun in the
+    hallway.'
+  C2SuccessRewards:
+  - RepairBaseWalls
+  - DropTP
+  - DropTP
+  C2FailureRewards:
+  - DropShotgun

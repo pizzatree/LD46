@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb3c7f724e184c34babcfe9aaad5c372, type: 3}
+  m_Name: A Sealed Letter
+  m_EditorClassIdentifier: 
+  Title: A Sealed Letter
+  ScenarioText: 'A dove flying above you drops a sealed, damp envelope at your feet.
+
+
+    You''re
+    deathly afraid of papercuts...
+
+
+    ... but you feel it can be coincidence this
+    occurred. '
+  Choice1: Open the envelope (80%)
+  C1SuccessWeight: 85
+  C1SuccessText: 'Inside, you read that you''ve won the lottery!
+
+
+    A small one...
+
+
+    Really,
+    an insignificant one.
+
+
+    (+1 toilet paper)'
+  C1FailureText: "All of your savings have been liquidated. \n\nAfter crying, you
+    lost one roll of toilet paper."
+  C1SuccessRewards:
+  - DropTP
+  C1FailureRewards:
+  - RemoveTP
+  Choice2: Kick the envelope (15%)
+  C2SuccessWeight: 20
+  C2SuccessText: 'The envelope explodes into flames
+
+
+    Raining down molten steel
+    in glorious fashion
+
+
+    You find 3 rapid fire guns.'
+  C2FailureText: 'At the moment of contact, the envelope contorts...
+
+
+    To your
+    surprise, it forms a mouth full of horrific, bloody teeth!
+
+
+    What is happening?
+
+
+    THEY
+    HAVE I N F I L T R A T E D
+
+    (sneak attack)'
+  C2SuccessRewards:
+  - DropRapidfire
+  - DropRapidfire
+  - DropRapidfire
+  C2FailureRewards:
+  - SurpriseAttack

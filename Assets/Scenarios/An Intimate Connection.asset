@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb3c7f724e184c34babcfe9aaad5c372, type: 3}
+  m_Name: An Intimate Connection
+  m_EditorClassIdentifier: 
+  Title: An Intimate Connection
+  ScenarioText: "Though a gentle reprieve, \nYour emotional connection to your accomplice
+    makes you feel the pain of impacted colon. \n\nYou wish that you too could stop
+    and relieve your quaking bowels...\n\nBut your duty is to protect the poor sod."
+  Choice1: Push on, embracing the pain as a source of fuel! (30%)
+  C1SuccessWeight: 35
+  C1SuccessText: 'Your impacted colon solidifies, becoming stronger!
+
+
+    Your base
+    has been repaired.'
+  C1FailureText: 'Your colon gives and you''ve demolished your pants...
+
+    ...requiring
+    a tactical repantsing and a roll of your finest TP.
+
+
+    (-1 Toilet Paper)'
+  C1SuccessRewards:
+  - RepairBaseWalls
+  C1FailureRewards:
+  - RemoveTP
+  Choice2: Take a short break, relieving yourself in the field of corpses! (50%)
+  C2SuccessWeight: 55
+  C2SuccessText: 'After doing your duty you find a shotgun laying on the ground.
+
+
+    (+1
+    Shotgun)'
+  C2FailureText: 'What did you eat? It''s gone EVERYWHERE.
+
+    You now have soggy
+    feet.'
+  C2SuccessRewards:
+  - DropShotgun
+  C2FailureRewards: []

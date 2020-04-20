@@ -15,16 +15,8 @@ public abstract class Health : MonoBehaviour
         currentHealth = MaxHealth;
     }
 
-    bool cooldown = false;
-    private void resetDmgCooldown() => cooldown = false;
-
     public virtual void TakeDamage(float amount)
     {
-        if (cooldown)
-            return;
-
-        cooldown = true;
-        Invoke("resetDmgCooldown", 0.3f);
         currentHealth -= amount;
 
         if (currentHealth <= 0 && !dead)
