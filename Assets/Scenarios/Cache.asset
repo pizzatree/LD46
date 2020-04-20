@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb3c7f724e184c34babcfe9aaad5c372, type: 3}
+  m_Name: Cache
+  m_EditorClassIdentifier: 
+  Title: Cache me outside how about dat?
+  ScenarioText: 'After returning to the base, your accomplice wishes to talk.
+
+
+    You
+    walk down to the bathroom which reeks of old fast food and ammonia
+
+    ... and
+    cats?
+
+
+    Regardless, your accomplice discusses the whereabouts of a nearby
+    cache that should be filled to the brim with toilet paper and guns.
+
+
+    Do
+    you embark on this journey?'
+  Choice1: Embark (70%)
+  C1SuccessWeight: 75
+  C1SuccessText: 'What a weirdly exclusive combination of items.
+
+
+    You return
+    safely with 2 shotguns and 3 rolls of toilet paper.'
+  C1FailureText: 'After seeing flares shot into the sky by the cache you decide that
+    it''s not worth it
+
+    While on your way back you discover ammunition on the
+    ground.'
+  C1SuccessRewards:
+  - DropShotgun
+  - DropTP
+  - DropTP
+  - DropShotgun
+  - DropTP
+  C1FailureRewards:
+  - DropAmmo
+  Choice2: No (90)
+  C2SuccessWeight: 95
+  C2SuccessText: 'You hear the violent screams and rage of your accomplice dispelling
+    their demons.
+
+    You decide to go outside and repair the walls.'
+  C2FailureText: 'You hear the violent screams and rage of your accomplice dispelling
+    their demons.
+
+    So did your enemies.
+
+    (surprise attack)'
+  C2SuccessRewards:
+  - RepairBaseWalls
+  C2FailureRewards:
+  - SurpriseAttack

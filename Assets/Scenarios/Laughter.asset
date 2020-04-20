@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb3c7f724e184c34babcfe9aaad5c372, type: 3}
+  m_Name: Laughter
+  m_EditorClassIdentifier: 
+  Title: Clowning around
+  ScenarioText: 'You hear a hysterical laughter echoing across the atmosphere.
+
+
+    Do
+    you choose to investigate or to avoid it?'
+  Choice1: Investigate (80%)
+  C1SuccessWeight: 80
+  C1SuccessText: 'The fellow that was laughing keeps saying that we are gonna float
+    too.
+
+
+    Not sure what that means, but he sure gave us a lot of ammo!'
+  C1FailureText: 'After finding a man with a red nose
+
+    he morphs into something
+    from your greatest nightmares.
+
+
+    You have defiled your pants.
+
+    (-1TP)'
+  C1SuccessRewards:
+  - DropAmmo
+  - DropAmmo
+  - DropAmmo
+  - DropAmmo
+  C1FailureRewards:
+  - RemoveTP
+  Choice2: Avoid (95%)
+  C2SuccessWeight: 95
+  C2SuccessText: 'You''d rather have nothing to do with IT.
+
+
+    With all your leftover
+    time you''re able to repair the barricades.'
+  C2FailureText: 'WHAT IS THAT?? IT''S COMING AFTER YOU
+
+
+    You have defiled your
+    pants
+
+    (-1 TP)'
+  C2SuccessRewards:
+  - RepairBaseWalls
+  C2FailureRewards:
+  - RemoveTP

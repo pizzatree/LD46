@@ -14,33 +14,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Scenario
   Title: Heavy wipes
   ScenarioText: "At the end of your battle, you hear a blood curdling shriek radiating
-    from down the hall.\nBeneath the door to the washroom the floor boards are shimmering...\n
-    ...as if a gelatinous red wine were spilled across them.\n\nYou hear heavy breathing...\n\nYou
+    from down the hall.\nBeneath the door to the washroom the floor boards are shimmering...\n...as
+    if a gelatinous red wine were spilled across them.\n\nYou hear heavy breathing...\n\nYou
     open the door and discover that your accomplice needs more than just toilet paper.\nTo
     retrieve more wiping material leaves open the opportunity of a surprise attack...
     \n ....to not could mean certain death by unsanitized wipe."
   Choice1: Seek out baby wipes (65%)
   C1SuccessWeight: 70
   C1SuccessText: "You found baby wipes. \nYour accomplice is eternally in your debt.\nAlong
-    the way you also found some walls. (Right click)"
+    the way you also found some walls and a turret (Right click)"
   C1FailureText: "You found single ply and returned safely. \nYour accomplice is
     safe from bullet wounds; however...\n... the damaged spirits from using single
     ply may prove an immutable hurdle."
   C1SuccessRewards:
   - AddWalls
+  - AddWalls
+  - AddSentry
   C1FailureRewards: []
   Choice2: Brave it out (30%) (-2 TP)
   C2SuccessWeight: 35
   C2SuccessText: "Has your accomplice been eating snickers? \nThe brown substance
     on their fingers is absolutely vile.\nHowever, you found a really cool gadget.
     (Right click)"
-  C2FailureText: 'Your accomplice died of fleshwounds from down under.
+  C2FailureText: 'Your accomplice suffered a myriad of fleshwounds from down under.
 
-    (Game
-    Over)'
+    (-1
+    TP)'
   C2SuccessRewards:
   - RepairBaseWalls
   - AddSentry
+  - AddSentry
+  - AddSentry
   - RemoveTP
   C2FailureRewards:
-  - DoGameOver
+  - RemoveTP
